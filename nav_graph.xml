@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/itemFragment">
+    <fragment
+        android:id="@+id/itemFragment"
+        android:name="com.example.navigationcomponent.ItemFragment"
+        android:label="fragment_item"
+        tools:layout="@layout/fragment_item" >
+        <action
+            android:id="@+id/action_itemFragment_to_bayarFragment"
+            app:destination="@id/bayarFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bayarFragment"
+        android:name="com.example.navigationcomponent.BayarFragment"
+        android:label="fragment_bayar"
+        tools:layout="@layout/fragment_bayar" >
+        <action
+            android:id="@+id/action_bayarFragment_to_keranjangFragment3"
+            app:destination="@id/keranjangFragment3" />
+    </fragment>
+    <fragment
+        android:id="@+id/keranjangFragment3"
+        android:name="com.example.navigationcomponent.KeranjangFragment"
+        android:label="fragment_keranjang"
+        tools:layout="@layout/fragment_keranjang" >
+        <action
+            android:id="@+id/action_keranjangFragment3_to_itemFragment"
+            app:destination="@id/itemFragment" />
+    </fragment>
+</navigation>
